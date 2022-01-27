@@ -17,25 +17,25 @@ STATUS = {'200': 0,
 total_file_size = 0
 counter = 0
 try:
-	for argument in sys.stdin:
-		arguments = argument.split(" ")
-		if len(arguments) > 2:
-			status_code = arguments[-2]
-			file_size = int(arguments[-1])
-			if status_code in STATUS:
-				STATUS[status_code] += 1
-			total_file_size += file_size
-			counter += 1
-			if counter == 10:
-				print("File size: {:d}".format(total_file_size))
-				for key, value in sorted(STATUS.items()):
-					if value != 0:
-						print("{}: {}".format(key, value))
-				counter = 0
+    for argument in sys.stdin:
+        arguments = argument.split(" ")
+        if len(arguments) > 2:
+            status_code = arguments[-2]
+            file_size = int(arguments[-1])
+            if status_code in STATUS:
+                STATUS[status_code] += 1
+            total_file_size += file_size
+            counter += 1
+            if counter == 10:
+                print("File size: {:d}".format(total_file_size))
+                for key, value in sorted(STATUS.items()):
+                    if value != 0:
+                        print("{}: {}".format(key, value))
+                counter = 0
 except KeyboardInterrupt:
-	pass
+    pass
 finally:
-	print("File size: {:d}".format(total_file_size))
-	for key, value in sorted(STATUS.items()):
-		if value != 0:
-			print("{}: {}".format(key, value))
+    print("File size: {:d}".format(total_file_size))
+    for key, value in sorted(STATUS.items()):
+        if value != 0:
+            print("{}: {}".format(key, value))
