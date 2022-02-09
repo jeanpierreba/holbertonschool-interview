@@ -13,8 +13,6 @@ int is_palindrome(unsigned long n)
 	{
 		residue = n % 10;
 		reversed = reversed * 10 + residue;
-		printf("%d\n", reversed);
-		printf("%d\n", residue);
 		n = n / 10;
 	}
 	if (number == reversed)
