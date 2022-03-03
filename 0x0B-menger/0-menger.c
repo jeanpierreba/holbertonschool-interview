@@ -1,10 +1,8 @@
 #include "menger.h"
 
 /**
-*
-*
-*
-*
+* menger - draws a 2D Menger Sponge
+* @level: level of the Menger Sponge to draw
 */
 void menger(int level)
 {
@@ -22,10 +20,9 @@ void menger(int level)
 }
 
 /**
-*
-*
-*
-*
+* fill - fills the draw with #
+* @row: rows
+* @column: columns
 */
 void fill(int row, int column)
 {
