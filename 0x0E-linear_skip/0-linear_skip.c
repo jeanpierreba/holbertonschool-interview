@@ -9,8 +9,8 @@
 skiplist_t *linear_skip(skiplist_t *list, int value)
 {
 	skiplist_t *result, *tmp;
-	char string_message1[25] = "Value checked at index";
-	char string_message2[35] = "Value found between indexes";
+	char string_message1[25] = "Value checked at index ";
+	char string_message2[35] = "Value found between indexes ";
 
 	if (!list)
 		return (NULL);
