@@ -16,14 +16,14 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 		return (NULL);
 	result = list;
 	tmp = list;
-	while (tmp->tmp)
+	while (tmp->express)
 	{
 		result = tmp;
-		tmp = tmp->tmp;
+		tmp = tmp->express;
 		printf("%s[%ld] = [%d]\n", string_message1, tmp->index, tmp->n);
 		if (tmp->n >= value)
 			break;
-		if (tmp->tmp == NULL)
+		if (tmp->express == NULL)
 		{
 			result = tmp;
 			while (tmp->next)
