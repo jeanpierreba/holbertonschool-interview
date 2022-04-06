@@ -3,7 +3,7 @@
 const request = require('request');
 request(`https://swapi-api.hbtn.io/api/films/${process.argv[2]}`, (error, response, body) => {
   if (!error) {
-    const character = JSON.parse(body).character;
+    const character = JSON.parse(body).characters;
     requestPrint(character, 0);
   }
 });
