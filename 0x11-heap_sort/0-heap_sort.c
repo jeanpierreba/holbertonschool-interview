@@ -34,9 +34,9 @@ void heapify(int *array, size_t n, int i, size_t size)
 {
 	int left = 2 * i + 1, right = 2 * i + 2, bigger = i, tmp;
 
-	if (left < n && array[left] > array[bigger])
+	if (left < (int) n && array[left] > array[bigger])
 		bigger = left;
-	if (right < n && array[right] > array[bigger])
+	if (right < (int) n && array[right] > array[bigger])
 		bigger = right;
 	if (bigger != i)
 	{
