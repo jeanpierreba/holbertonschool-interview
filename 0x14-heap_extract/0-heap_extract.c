@@ -7,8 +7,8 @@
 */
 int heap_extract(heap_t **root)
 {
-	binary_tree_t *last_node, *first_node;
-	int extract;
+	binary_tree_t *last_node = NULL, *first_node = NULL;
+	int extract = 0;
 
 	if (!root || !*root)
 		return (0);
@@ -47,15 +47,16 @@ int heap_extract(heap_t **root)
 */
 binary_tree_t *get_last_node(heap_t *root)
 {
-	int nodes, heap_size;
+	int nodes = 0, heap_size = 0;
 	binary_tree_t *last_node = NULL;
 
 	heap_size = get_nodes(root);
 	for (nodes = 1; nodes <= heap_size; nodes <<= 1)
-		nodes >>= 2;
+		;
+	nodes >>= 2;
 	for (last_node = root; nodes > 0; nodes >>= 1)
 	{
-		if (heap_size && nodes)
+		if (heap_size & nodes)
 			last_node = last_node->right;
 		else
 			last_node = last_node->left;
@@ -70,7 +71,7 @@ binary_tree_t *get_last_node(heap_t *root)
 */
 int get_nodes(heap_t *root)
 {
-	int left, right;
+	int left = 0, right = 0;
 
 	if (!root)
 		return (0);
@@ -85,8 +86,8 @@ int get_nodes(heap_t *root)
 */
 void heapify(binary_tree_t *root)
 {
-	binary_tree_t *new_node;
-	int tmp;
+	binary_tree_t *new_node = NULL;
+	int tmp = 0;
 
 	while (1)
 	{
