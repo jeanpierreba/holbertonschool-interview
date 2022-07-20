@@ -27,7 +27,7 @@ int valid_avl(const binary_tree_t *tree, int min, int max, int *tree_height)
 	int tmp1 = 0, tmp2 = 0;
 
 	if (!tree)
-		return (0);
+		return (1);
 	if (tree->n <= min || tree->n >= max)
 		return (0);
 	if (valid_avl(tree->left, min, tree->n, &tmp1) == 0 ||
