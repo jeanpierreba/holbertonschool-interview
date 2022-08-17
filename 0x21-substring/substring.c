@@ -105,7 +105,7 @@ int is_not_in(int *arr, int length, int k)
 int string_match(char const *str, char const *word)
 {
 	int i;
-	
+
 	for (i = 0; *(word + i) != '\0'; i++)
 	{
 		if (*(str + i) != *(word + i))
